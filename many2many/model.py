@@ -36,6 +36,14 @@ class Genre(db.Model):
     def __repr__(self):
         return f'<Genre genre={self.genre}>'
 
+class Category(db.Model):
+
+    __tablename__='category'
+    cat_id=db.Column(db.Integer, primary_key=True,autoincrement=True)
+
+    def __repr__(self):
+        return f'<Category cat_id={self.cat_id}>'
+
 class BookGenre(db.Model):
     """Book Genre"""
     __tablename__='bookgenre'
